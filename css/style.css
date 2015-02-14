@@ -4,21 +4,72 @@ div#section2 {
 	left: 0%;
 	top: 100%;
 	position: absolute;
-	z-index: 35;
 }
 div#section3 {
-	height: 100%;
+	height: 59px;
 	width: 100%;
 	left: 0%;
 	top: 200%;
 	position: absolute;
-	z-index: 35;
+	z-index: 200;
 }
-div#section4 {
-	height: 100%;
-	width: 100%;
-	left: 0%;
-	top: 300%;
+div#dance {
+	height: 75%;
+	width: 90%;
+	margin:0 auto;
+	left: 0;
+	right: 0;
+	top: 217%;
+	background: url('http://placehold.it/800x400/ec008c/ffffff/&text=Dance');
 	position: absolute;
-	z-index: 35;
+}
+div#photography {
+	height: 75%;
+	width: 90%;
+	margin:0 auto;
+	left: 0;
+	right: 0;
+	top: 297%;
+	background: url('http://placehold.it/800x400/FCD60C/ffffff/&text=Photography');
+	position: absolute;
+}
+div#music {
+	height: 75%;
+	width: 90%;
+	margin:0 auto;
+	left: 0;
+	right: 0;
+	top: 377%;
+	background: url('http://placehold.it/800x400/B7FF23/ffffff/&text=Music');
+	position: absolute;
+}
+div#dramatics {
+	height: 75%;
+	width: 90%;
+	margin:0 auto;
+	left: 0;
+	right: 0;
+	top: 457%;
+	background: url('http://placehold.it/800x400/FCD60C/ffffff/&text=Dramatics');
+	position: absolute;
+}
+div#xyz {
+	height: 75%;
+	width: 90%;
+	margin:0 auto;
+	left: 0;
+	right: 0;
+	top: 537%;
+	background: url('http://placehold.it/800x400/B7FF23/ffffff/&text=XYZ');
+	position: absolute;
+}
+div#fun {
+	height: 75%;
+	width: 90%;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: 627%;
+	background: url('http://placehold.it/800x400/2b82d9/ffffff/&text=Fun');
+	position: absolute;
 }
