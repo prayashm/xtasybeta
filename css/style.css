@@ -1,0 +1,10 @@
+div#section2 {
+	height: 75%;
+	width: 100%;
+	left: 0%;
+	top: 100%;
+	position: absolute;
+	z-index: 35;
+	background: url('../img/xtasy-repeat.jpg') repeat;
+	box-shadow: 10px 10px 5px #888888;
+}
