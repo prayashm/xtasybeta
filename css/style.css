@@ -1,10 +1,24 @@
 div#section2 {
-	height: 75%;
+	height: 100%;
 	width: 100%;
 	left: 0%;
 	top: 100%;
 	position: absolute;
 	z-index: 35;
-	background: url('../img/xtasy-repeat.jpg') repeat;
-	box-shadow: 10px 10px 5px #888888;
+}
+div#section3 {
+	height: 100%;
+	width: 100%;
+	left: 0%;
+	top: 200%;
+	position: absolute;
+	z-index: 35;
+}
+div#section4 {
+	height: 100%;
+	width: 100%;
+	left: 0%;
+	top: 300%;
+	position: absolute;
+	z-index: 35;
 }
