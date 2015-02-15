@@ -1,11 +1,11 @@
-div#section2 {
+div#about {
 	height: 100%;
 	width: 100%;
 	left: 0%;
 	top: 100%;
 	position: absolute;
 }
-div#section3 {
+div#nav {
 	height: 59px;
 	width: 100%;
 	left: 0%;
@@ -72,4 +72,14 @@ div#fun {
 	top: 617%;
 	background: url('http://placehold.it/800x400/2b82d9/ffffff/&text=Fun');
 	position: absolute;
+}
+
+div.left {
+	width: 25%;
+	float: left;
+}
+div.right {
+	width: 75%;
+	float: right;
+	padding: 5% 0;
 }
