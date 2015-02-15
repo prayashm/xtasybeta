@@ -2,11 +2,11 @@
 <html>
 <head>
 	<title>Xtasy 2k15 - Cultural Fest of College of Engineering and Technology, Bhubaneswar</title>
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="css/js-image-slider.css">
 	<link rel="stylesheet" type="text/css" href="css/component.css">
 	<link rel="stylesheet" type="text/css" href="css/sticky-navigation.css">
 	<link rel="stylesheet" type="text/css" href="css/caption-hover.css">
+	<link rel="stylesheet" type="text/css" href="css/flickity.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script type="text/javascript" src="js/modernizr.custom.js"></script>
@@ -24,17 +24,12 @@
 		<a href="#about" ><img src="img/x.png" height="70" width="70" ></a>
 	</div>
 	<div id="about">
-		<div class="row">
-			<div class="col-md-12">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</div>
+		<div id="about-gallery">
+			<div class="gallery-cell"><img src="http://placehold.it/1024x967/8C8/FFF/&text=Slide+1"></div>
+			<div class="gallery-cell"><img src="http://placehold.it/1024x967/333/FFF/&text=Slide+2"></div>
+			<div class="gallery-cell"><img src="http://placehold.it/1024x967/7C7/FFF/&text=Slide+3"></div>
 		</div>
-	</div>
+	</div><!-- /about -->
 	<div id="nav">
 		<div id='cssmenu'>
 			<ul>
@@ -278,6 +273,7 @@
 	<script type="text/javascript" src="js/boxesFx.js"></script>
 	<script type="text/javascript" src="js/jquery.sticky.js"></script>
 	<script type="text/javascript" src="js/jquery.stickynav.js"></script>
+	<script type="text/javascript" src="js/flickity.pkgd.min.js"></script>
 	<script type="text/javascript">
 		new BoxesFx( document.getElementById( 'boxgallery' ) );
 	</script>
@@ -288,6 +284,13 @@
 				$('li.active').removeClass('active');
 				$(this).addClass('active');
 			});
+		});
+		$('#about-gallery').flickity({
+			cellAlign: 'center',
+			contain: true,
+			wrapAround: true,
+			autoPlay: 1500,
+			pageDots: false
 		});
 	</script>
 </body>

@@ -83,6 +83,10 @@ div.right {
 	float: right;
 	padding: 5% 0;
 }
-.row {
+div#about-gallery {
+	height: 100%;
+}
+div#about-gallery > .gallery-cell {
+	height: 100%;
 	width: 100%;
 }
