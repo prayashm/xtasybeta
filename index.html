@@ -6,7 +6,6 @@
 	<link rel="stylesheet" type="text/css" href="css/component.css">
 	<link rel="stylesheet" type="text/css" href="css/sticky-navigation.css">
 	<link rel="stylesheet" type="text/css" href="css/caption-hover.css">
-	<link rel="stylesheet" type="text/css" href="css/flickity.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script type="text/javascript" src="js/modernizr.custom.js"></script>
@@ -21,26 +20,25 @@
 		</div>
 	</div>
 	<div style="z-index:3;position:absolute;left:47%;top:85%;">
-		<a href="#about" ><img src="img/x.png" height="70" width="70" ></a>
+		<a href="#about" ><img src="img/down.png" height="70" width="70" ></a>
 	</div>
 	<div id="about">
-		<div id="about-gallery">
-			<div class="gallery-cell"><img src="http://placehold.it/1024x967/8C8/FFF/&text=Slide+1"></div>
-			<div class="gallery-cell"><img src="http://placehold.it/1024x967/333/FFF/&text=Slide+2"></div>
-			<div class="gallery-cell"><img src="http://placehold.it/1024x967/7C7/FFF/&text=Slide+3"></div>
+		<div class="slider-nav">
+			<div class="prev"><img src="img/prev.png" height="70" width="70"></div>
+			<div class="next"><img src="img/next.png" height="70" width="70"></div>
 		</div>
 	</div><!-- /about -->
 	<div id="nav">
 		<div id='cssmenu'>
 			<ul>
 				<li class='active'><a href='#'>Home</a></li>
-				<li><a href='#'>Dance</a></li>
-				<li><a href='#'>Photography</a></li>
-				<li><a href='#'>Music</a></li>
-				<li><a href='#'>Dramatics</a></li>
-				<li><a href='#'>XYZ</a></li>
-				<li><a href='#'>Fun</a></li>
-				<li><a href='#'>Contact</a></li>
+				<li><a href='#dance'>Dance</a></li>
+				<li><a href='#photography'>Photography</a></li>
+				<li><a href='#music'>Music</a></li>
+				<li><a href='#dramatics'>Dramatics</a></li>
+				<li><a href='#xyz'>XYZ</a></li>
+				<li><a href='#fun'>Fun</a></li>
+				<li><a href='#contact'>Contact</a></li>
 			</ul>
 		</div>
 	</div>
@@ -265,33 +263,61 @@
 	</div>
 	<div class="container">
 		<div id="fun" class="scrollme animateme" data-when="enter" data-from="0.5" data-to="0" data-crop="false" data-opacity="0" data-scale="1.5"></div>
+	</div><!-- /fun -->
+	<footer class="footer scrollme">
+
+		<div
+		class="footer_block animateme"
+		data-when="enter"
+		data-from="1"
+		data-to="0"
+		data-rotatex="90"
+		>
+
+		<div class="wrapper">
+
+			<h3>Also on this page:</h3>
+
+			<ul>
+				<li><a href="http://www.pixilate.com/font/bellota/">Bellota</a> for the headings.</li>
+				<li><a href="http://www.droidfonts.com/droidfonts/">Droid Serif &amp; Droid Mono</a> for the rest of the type.</li>
+				<li><a href="http://fittextjs.com/">FitText.js</a> to make the big heading big.</li>
+			</ul>
+
+			<p>Made by <a href="http://nckprsn.com">Nick Pearson</a></p>
+
+		</div><!-- wrapper -->
+
 	</div>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/js-image-slider.js"></script>
-	<script type="text/javascript" src="js/jquery.scrollme.min.js"></script>
-	<script type="text/javascript" src="js/classie.js"></script>
-	<script type="text/javascript" src="js/boxesFx.js"></script>
-	<script type="text/javascript" src="js/jquery.sticky.js"></script>
-	<script type="text/javascript" src="js/jquery.stickynav.js"></script>
-	<script type="text/javascript" src="js/flickity.pkgd.min.js"></script>
-	<script type="text/javascript">
-		new BoxesFx( document.getElementById( 'boxgallery' ) );
-	</script>
-	<script>
-		$(window).load(function(){
-			$("#cssmenu").sticky({ topSpacing: 0 });
-			$('#cssmenu li a').on('click', function(){
-				$('li.active').removeClass('active');
-				$(this).addClass('active');
-			});
+
+</footer>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/js-image-slider.js"></script>
+<script type="text/javascript" src="js/jquery.scrollme.min.js"></script>
+<script type="text/javascript" src="js/classie.js"></script>
+<script type="text/javascript" src="js/boxesFx.js"></script>
+<script type="text/javascript" src="js/jquery.sticky.js"></script>
+<script type="text/javascript" src="js/jquery.stickynav.js"></script>
+<script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
+<script type="text/javascript">
+	new BoxesFx( document.getElementById( 'boxgallery' ) );
+</script>
+<script>
+	$(window).load(function(){
+		$("#cssmenu").sticky({ topSpacing: 0 });
+		$('#cssmenu li a').on('click', function(){
+			$('li.active').removeClass('active');
+			$(this).addClass('active');
 		});
-		$('#about-gallery').flickity({
-			cellAlign: 'center',
-			contain: true,
-			wrapAround: true,
-			autoPlay: 1500,
-			pageDots: false
-		});
-	</script>
+		$("#about").backstretch(["img/about/background.jpg","img/about/pronite.jpg","img/about/xtasy.jpg", {duration: 3000, fade: 750, centeredX: true, centeredY: true}]);
+	});
+	$(".prev img").click(function(){
+		$("#about").backstretch("prev");
+	});
+	$(".next img").click(function(){
+		$("#about").backstretch("next");
+	});
+</script>
 </body>
 </html>
