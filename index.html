@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/component.css">
 	<link rel="stylesheet" type="text/css" href="css/sticky-navigation.css">
 	<link rel="stylesheet" type="text/css" href="css/caption-hover.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.maximage.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script type="text/javascript" src="js/modernizr.custom.js"></script>
@@ -23,9 +24,21 @@
 		<a href="#about" ><img src="img/down.png" height="70" width="70" ></a>
 	</div>
 	<div id="about">
-		<div class="slider-nav">
-			<div class="prev"><img src="img/prev.png" height="70" width="70"></div>
-			<div class="next"><img src="img/next.png" height="70" width="70"></div>
+		<div class="overlay">
+			<div class="intro">
+				<h1>Xtasy!</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, in iusto debitis itaque nihil, necessitatibus enim deserunt quae provident maiores, error ullam mollitia expedita. Sapiente sed laborum quos, dolorum soluta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad perferendis, quas magni alias quaerat dignissimos deserunt quia eaque ipsa voluptates unde excepturi dolor, repudiandae deleniti sapiente qui fuga beatae nostrum!</p>
+			</div>
+		</div>
+		<div id="about-background" class="cycle-slideshow" data-cycle-fx="fade">
+			<img src="img/about/A.jpg" alt="">
+			<img src="img/about/B.jpg" alt="">
+			<img src="img/about/C.jpg" alt="">
+			<img src="img/about/D.jpg" alt="">
+			<img src="img/about/E.jpg" alt="">
+			<img src="img/about/F.jpg" alt="">
+			<img src="img/about/G.jpg" alt="">
+			<img src="img/about/H.jpg" alt="">
 		</div>
 	</div><!-- /about -->
 	<div id="nav">
@@ -264,60 +277,34 @@
 	<div class="container">
 		<div id="fun" class="scrollme animateme" data-when="enter" data-from="0.5" data-to="0" data-crop="false" data-opacity="0" data-scale="1.5"></div>
 	</div><!-- /fun -->
-	<footer class="footer scrollme">
+	<div class="container-fluid">
+		<div id="groundzero" class="scrollme animateme" data-when="enter" data-from="0.5" data-to="0" data-crop="false" data-opacity="0" data-scale="1.5"></div>
+	</div><!-- /groundzero -->
+	<div class="container-fluid">
+		<div id="footer" class="scrollme animateme" data-when="enter" data-from="0.5" data-to="0" data-crop="false" data-opacity="0" data-scale="1.5"></div>
+	</div><!-- footer -->
 
-		<div
-		class="footer_block animateme"
-		data-when="enter"
-		data-from="1"
-		data-to="0"
-		data-rotatex="90"
-		>
-
-		<div class="wrapper">
-
-			<h3>Also on this page:</h3>
-
-			<ul>
-				<li><a href="http://www.pixilate.com/font/bellota/">Bellota</a> for the headings.</li>
-				<li><a href="http://www.droidfonts.com/droidfonts/">Droid Serif &amp; Droid Mono</a> for the rest of the type.</li>
-				<li><a href="http://fittextjs.com/">FitText.js</a> to make the big heading big.</li>
-			</ul>
-
-			<p>Made by <a href="http://nckprsn.com">Nick Pearson</a></p>
-
-		</div><!-- wrapper -->
-
-	</div>
-
-</footer>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/js-image-slider.js"></script>
-<script type="text/javascript" src="js/jquery.scrollme.min.js"></script>
-<script type="text/javascript" src="js/classie.js"></script>
-<script type="text/javascript" src="js/boxesFx.js"></script>
-<script type="text/javascript" src="js/jquery.sticky.js"></script>
-<script type="text/javascript" src="js/jquery.stickynav.js"></script>
-<script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
-<script type="text/javascript">
-	new BoxesFx( document.getElementById( 'boxgallery' ) );
-</script>
-<script>
-	$(window).load(function(){
-		$("#cssmenu").sticky({ topSpacing: 0 });
-		$('#cssmenu li a').on('click', function(){
-			$('li.active').removeClass('active');
-			$(this).addClass('active');
+	<!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>-->
+	<script type="text/javascript" src="js/js-image-slider.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollme.min.js"></script>
+	<script type="text/javascript" src="js/classie.js"></script>
+	<script type="text/javascript" src="js/boxesFx.js"></script>
+	<script type="text/javascript" src="js/jquery.sticky.js"></script>
+	<script type="text/javascript" src="js/jquery.stickynav.js"></script>
+	<script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
+	<script type="text/javascript">
+		new BoxesFx( document.getElementById( 'boxgallery' ) );
+	</script>
+	<script>
+		$(window).load(function(){
+			$("#cssmenu").sticky({ topSpacing: 0 });
+			$('#cssmenu li a').on('click', function(){
+				$('li.active').removeClass('active');
+				$(this).addClass('active');
+			});
 		});
-		$("#about").backstretch(["img/about/background.jpg","img/about/pronite.jpg","img/about/xtasy.jpg", {duration: 3000, fade: 750, centeredX: true, centeredY: true}]);
-	});
-	$(".prev img").click(function(){
-		$("#about").backstretch("prev");
-	});
-	$(".next img").click(function(){
-		$("#about").backstretch("next");
-	});
-</script>
+
+		
+	</script>
 </body>
 </html>

@@ -40,7 +40,7 @@ div#music {
 	left: 0;
 	right: 0;
 	top: 377%;
-	background: url('../img/music/background.jpg') no-repeat #000;
+	background: url('../img/music/background.jpg') no-repeat #FFF;
 	position: absolute;
 }
 div#dramatics {
@@ -70,7 +70,27 @@ div#fun {
 	left: 0;
 	right: 0;
 	top: 617%;
-	background: url('../img/fun/background.jpg') no-repeat #CEA855;
+	background: url('../img/fun/background.jpg') no-repeat #000;
+	position: absolute;
+}
+div#groundzero {
+	height: 75%;
+	width: 90%;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: 697%;
+	background: url('http://placehold.it/800x400/33A02B/FFFFFF/&text=Ground+Zero') no-repeat #33A02B;
+	position: absolute;
+}
+div#footer {
+	height: 40%;
+	width: 100%;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: 777%;
+	background: url('http://placehold.it/800x400/663300/FFFFFF/&text=Footer') no-repeat #663300;
 	position: absolute;
 }
 
@@ -86,17 +106,28 @@ div.right {
 body {
 	overflow-x: hidden;
 }
-.slider-nav {
-	height: auto;
+div#about {
+	height: 100%;
 	width: 100%;
-	margin-top: 20%;
 }
-div.prev {
-	vertical-align: middle;
-	position: relative;
-	float: left;
+.cycle-slideshow {
+	height: 100%;
+	width: 100%;
+
 }
-div.next {
-	position: relative;
-	float: right;
+.cycle-slideshow img{
+	height: 100%;
+	width: 100%;
+}
+div.overlay {
+	background: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1000;
+}
+.intro {
+	padding: 20%;
+	color: white;
+	text-align: center;
 }
